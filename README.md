@@ -1,237 +1,261 @@
-# 🚀 Mobile Addiction Risk Prediction - Enterprise ML Project
+# 🚀 Mobile Addiction Risk Prediction using Machine Learning
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org/)
-[![Flask](https://img.shields.io/badge/Flask-2.3+-lightgrey.svg)](https://flask.palletsprojects.com/)
+[![Flask](https://img.shields.io/badge/Flask-2.3+-black.svg)](https://flask.palletsprojects.com/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)](https://scikit-learn.org/)
+[![Render](https://img.shields.io/badge/Deployed%20on-Render-46E3B7.svg)](https://render.com/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success.svg)](https://mobile-addiction-risk.onrender.com/)
 
-A comprehensive, production-ready machine learning project for predicting mobile phone addiction risk levels. Features advanced model comparison, comprehensive evaluation, beautiful visualizations, and a professional web interface.
+## 🌐 Live Demo
 
-## 🎯 Key Features
+**🔗 https://mobile-addiction-risk.onrender.com/**
 
-### 🤖 Deployment-Ready ML Pipeline
-- **Simple RandomForest model** for fast local predictions
-- **Feature Engineering**: 10+ derived features to improve signal
-- **Probability output**: Low / Medium / High class probabilities
-- **Consistent preprocessing** with a scikit-learn pipeline
+A production-ready end-to-end Machine Learning web application that predicts **Mobile Addiction Risk** using behavioral data and engineered features. The application is built with **Flask**, **scikit-learn**, and deployed on **Render** for real-time predictions.
 
-### 📊 Practical Analytics
-- **Feature-driven predictions** using engineered features
-- **Clear risk scoring** on a 0-10 scale
-- **User-friendly output** with advice text
-- **Local deployment** without external training dependencies
+---
 
-### 🌐 Production-Ready Web Application
-- **Dark-themed UI**: Modern, responsive design with input validation
-- **REST API**: JSON endpoints for programmatic access
-- **Real-time Predictions**: Instant risk assessment with probability scores
-- **Input Validation**: Smart limits and user-friendly error handling
-- **Interactive Features**: Clear/reset functionality and helpful advice
+# 📌 Features
 
-### 🚀 Deployment
-- **Local deployment**: Simple Python-based web app
-- **Lightweight runtime**: scikit-learn model pipeline with Flask
-- **Minimal dependencies**: No Docker required
-- **Easy extension**: Add new models or features when needed
+- 🤖 End-to-End Machine Learning Pipeline
+- 🌐 Live Flask Web Application
+- 📊 Real-time Risk Prediction
+- 🎯 Low / Medium / High Risk Classification
+- 📈 Probability Score for Each Prediction
+- ⚡ Feature Engineering Pipeline
+- 🛡 Input Validation
+- 📱 Responsive Dark-Themed UI
+- 🔥 Production-ready Deployment on Render
+- 🔗 REST API Support
 
-## 📈 Model Performance
+---
 
-| Algorithm | Accuracy | CV Score | Training Time |
-|-----------|----------|----------|---------------|
-| Gradient Boosting | 94.2% | 92.1±2.3% | 0.8s |
-| Random Forest | 93.8% | 91.7±2.1% | 0.6s |
-| AdaBoost | 89.4% | 87.3±3.2% | 0.4s |
-| SVM | 87.6% | 85.4±2.8% | 1.2s |
-| Logistic Regression | 85.1% | 83.2±2.9% | 0.2s |
-| Naive Bayes | 82.3% | 80.1±3.1% | 0.1s |
+# 🛠 Tech Stack
 
-## 🏗️ Project Structure
+- Python
+- Flask
+- scikit-learn
+- Pandas
+- NumPy
+- Joblib
+- HTML5
+- CSS3
+- Render
+- Git & GitHub
 
+---
+
+# 📂 Project Structure
+
+```text
+mobile-addiction-risk/
+│
+├── app.py
+├── build_simple_model.py
+├── model_utils.py
+├── requirements.txt
+├── README.md
+│
+├── artifacts/
+│   ├── risk_pipeline.pkl
+│   ├── label_encoder.pkl
+│   ├── label_classes.json
+│   ├── feature_columns.json
+│   └── processed_features.csv
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── css/
+        └── style.css
 ```
-mobile-addiction-ml/
-├── 🌐 app.py                       # Flask web application
-├── 🤖 model_utils.py               # ML utilities & feature engineering
-├── 📦 build_simple_model.py        # Train a deployment-ready RandomForest model
-├── 📚 requirements.txt             # Dependencies
-├── 📖 README.md                    # This file
-├── 🎨 templates/index.html         # Web interface
-├── 🎭 static/css/style.css         # Styling
-└── 📁 artifacts/                   # Model artifacts
-    ├── risk_pipeline.pkl
-    ├── label_encoder.pkl
-    ├── processed_features.csv
+
+---
+
+# 🚀 Live Deployment
+
+The project is successfully deployed on **Render**.
+
+### Live Website
+
+https://mobile-addiction-risk.onrender.com/
+
+---
+
+# ⚙ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/utsavgangadiya/mobile-addiction-risk.git
 ```
 
-## 🚀 Quick Start
+Move into the project
 
-### 1. Runtime Setup
+```bash
+cd mobile-addiction-risk
+```
+
+Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Run the web application locally
+Run the application
+
 ```bash
 python app.py
 ```
-Visit http://localhost:5000
 
-### 3. Optional: build a simple model
-```bash
-python build_simple_model.py
+Open your browser
+
+```
+http://localhost:5000
 ```
 
-This creates `artifacts/risk_pipeline.pkl`, `artifacts/label_encoder.pkl`, and `artifacts/processed_features.csv`.
+---
 
-> Note: this repository is prepared for local deployment with the trained artifacts already included in `artifacts/`. The training dataset is not part of the deployment package.
+# 🧠 Machine Learning Pipeline
 
-## 🔬 Technical Highlights
+The project follows a complete Machine Learning workflow:
 
-### Feature Engineering
-- **Social Media Ratio**: SocialMediaHours / ScreenTime
-- **Study Efficiency**: StudyHours / SleepHours
-- **Screen Balance**: ScreenTime - StudyHours
-- **Stress Intensity**: StressLevel / ScreenTime
-- **Daily Load**: Combined activity metric
+- Data Preprocessing
+- Feature Engineering
+- Model Training
+- Model Serialization
+- Prediction Pipeline
+- Flask Integration
+- Live Deployment
 
-### Model Selection Strategy
-- Automated hyperparameter tuning for all algorithms
-- Cross-validation with stratified sampling
-- Feature importance analysis
-- Computational efficiency evaluation
+The trained pipeline is stored as
 
-### Production Features
-- Input validation and sanitization
-- Error handling and logging
-- RESTful API design
-- Local Python deployment
-- Health monitoring
+```
+artifacts/risk_pipeline.pkl
+```
 
-## 📊 API Documentation
+which is directly used for inference.
+
+---
+
+# 📊 Feature Engineering
+
+The model generates additional informative features, including:
+
+- Social Media Ratio
+- Study Efficiency
+- Screen Balance
+- Stress Intensity
+- Daily Activity Load
+
+These engineered features improve prediction quality and model performance.
+
+---
+
+# 🎯 Prediction Output
+
+The application predicts:
+
+- Low Risk
+- Medium Risk
+- High Risk
+
+Each prediction includes:
+
+- Risk Category
+- Risk Score
+- Prediction Probability
+- Personalized Recommendation
+
+---
+
+# 🔗 API Endpoint
 
 ### Predict Risk
-```http
-POST /api/predict
-Content-Type: application/json
 
-{
-  "ScreenTime": 5.2,
-  "SocialMediaHours": 2.9,
-  "StudyHours": 3.0,
-  "SleepHours": 6.5,
-  "StressLevel": 3
-}
+```
+POST /api/predict
 ```
 
-**Response:**
+Example Request
+
 ```json
 {
-  "prediction": "Medium",
-  "risk_score": 5.23,
-  "advice": "Try to reduce total screen time toward 5 hours or less; keep social media below 2 hours",
-  "probabilities": {
-    "Low": 0.1234,
-    "Medium": 0.7654,
-    "High": 0.1112
-  },
-  "features": {
     "ScreenTime": 5.2,
     "SocialMediaHours": 2.9,
     "StudyHours": 3.0,
     "SleepHours": 6.5,
     "StressLevel": 3
-  }
 }
 ```
 
-## 🧪 Testing
-
-This project is set up for local deployment and runtime prediction. The current minimal deployment version does not include the training/test scripts used for full model comparison.
-
-## 📈 Performance Metrics
-
-- **Accuracy**: 94.2% (Gradient Boosting)
-- **Precision**: 93.8% (weighted average)
-- **Recall**: 94.1% (weighted average)
-- **F1-Score**: 93.9% (weighted average)
-- **Training Time**: < 1 second
-- **Inference Time**: < 10ms per prediction
-
-## 🎯 Use Cases
-
-- **Educational Institutions**: Student wellness monitoring
-- **Healthcare Providers**: Digital wellness assessment
-- **Parents**: Family screen time management
-- **Corporate Wellness**: Employee mental health programs
-- **Research**: Mobile addiction studies
-
-## 🔧 Customization
-
-### Adding New Features
-```python
-# In model_utils.py
-def build_features(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-    # Add your custom features here
-    df["CustomFeature"] = df["SomeColumn"] / df["AnotherColumn"]
-    return df
-```
-
-### Model Configuration
-```python
-# In model_utils.py
-def get_model() -> object:
-    return RandomForestClassifier(random_state=1)
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Add comprehensive tests
-4. Ensure all tests pass
-5. Submit a pull request
-
-
-
-## 🙏 Acknowledgments
-
-- Built with scikit-learn, Flask, and modern ML practices
-- Inspired by real-world digital wellness applications
-- Designed for educational and professional ML portfolios
-
----
-
-**⭐ Star this repo if you find it helpful for your ML journey!**
-
-## Web interface
-
-Start the web app after training the model:
-
-```bash
-python app.py
-```
-
-Then open `http://localhost:5000` in your browser. The page provides:
-- a dark-themed prediction form
-- risk prediction and probability breakdown
-- a JSON API endpoint at `/api/predict`
-
-Example API request body:
+Example Response
 
 ```json
 {
-  "ScreenTime": 5.2,
-  "SocialMediaHours": 2.9,
-  "StudyHours": 3.0,
-  "SleepHours": 6.5,
-  "StressLevel": 3
+    "prediction": "Medium",
+    "risk_score": 5.23,
+    "probabilities": {
+        "Low": 0.12,
+        "Medium": 0.76,
+        "High": 0.12
+    },
+    "advice": "Reduce daily screen time and improve sleep habits."
 }
 ```
 
-## Notes
 
-- The web app now shows a numeric risk score on a 0–10 scale, along with the predicted `Low` / `Medium` / `High` label.
-- The UI also offers simple usage advice such as reducing screen time, lowering social media hours, or improving sleep.
-- The project uses a production-style scikit-learn pipeline.
-- The model and scaler are saved together so new data can be predicted consistently.
-- Engineered features increase model signal and are saved in `artifacts/processed_features.csv`.
-- `mobile_addiction_project.py` was a legacy file and is no longer needed.
+---
+
+# ✨ Highlights
+
+- End-to-End ML Project
+- Flask Backend
+- Production-ready Prediction Pipeline
+- Real-time Predictions
+- Responsive User Interface
+- REST API
+- Feature Engineering
+- Live Deployment
+- Clean Project Structure
+- Portfolio-ready Project
+
+---
+
+# 🚀 Future Improvements
+
+- User Authentication
+- Prediction History
+- Dashboard Analytics
+- Explainable AI (SHAP)
+- Docker Support
+- Cloud Database
+- Model Monitoring
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Commit your changes.
+5. Open a Pull Request.
+
+---
+
+# 👨‍💻 Author
+
+**Utsav Gangadiya**
+
+GitHub: https://github.com/utsavgangadiya
+
+Live Demo: https://mobile-addiction-risk.onrender.com/
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a **Star ⭐** on GitHub.
